@@ -56,6 +56,10 @@
 
 - (NSArray<RCExtensionPluginItemInfo *> *)getPluginBoardItemInfoList:(RCConversationType)conversationType
                                                             targetId:(NSString *)targetId {
+#warning 群聊隐藏音视频功能
+    if (conversationType == ConversationType_GROUP) {
+        return @[];
+    }
     NSMutableArray *itemList = [[NSMutableArray alloc] init];
     if ([targetId isEqualToString:[RCIMClient sharedRCIMClient].currentUserInfo.userId]) {
         return itemList;
