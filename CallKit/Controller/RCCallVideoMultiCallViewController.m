@@ -582,7 +582,7 @@
         self.cameraSwitchButton.hidden = self.isFullScreen;
         self.addButton.hidden = self.isFullScreen;
 #warning 群视频隐藏 添加按钮
-        self.addButton.hidden = true
+        self.addButton.hidden = YES;
         self.muteButton.hidden = self.isFullScreen;
         self.hangupButton.hidden = self.isFullScreen;
         self.cameraCloseButton.hidden = self.isFullScreen;
